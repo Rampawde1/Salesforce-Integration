@@ -1,0 +1,50 @@
+public class PostalPinCodeParserHelper 
+{
+	Public static void ParseJSONContent()
+    {
+        String postalJSON = '{"Name":"Sanjeev Reddy Nagar","Description":null,"BranchType":"Sub Post Office","DeliveryStatus":"Delivery","Circle":"Andhra Pradesh","District":"Hyderabad","Division":"Hyderabad City","Region":"Hyderabad City"}';
+        
+        System.JSONParser pParser = System.JSON.createParser(postalJSON);
+        
+        While(pParser.nextToken() != Null)
+        {
+           if(pParser.getCurrentToken() == JsonToken.FIELD_NAME && pParser.getText() == 'Name') 
+           {
+               pParser.nextToken();
+               System.debug('Branch Name is...: '+ pParser.getText());
+           }
+           else if(pParser.getCurrentToken() == JsonToken.FIELD_NAME && pParser.getText() == 'Description')
+           {
+               pParser.nextToken();
+               System.debug('Description is...: '+ pParser.getText());
+           }
+           else if(pParser.getCurrentToken() == jsontoken.FIELD_NAME && pParser.getText() == 'BranchType')
+           {
+               pParser.nextToken();
+               System.debug('BranchType Value is....: '+ pParser.getText());
+           }
+           else if(pPArser.getCurrentToken() == JsonToken.FIELD_NAME && pParser.getText() == 'DeliveryStatus')
+           {
+               pParser.nextToken();
+               system.debug('DeliveryStatus Value is...: '+ pParser.getText());
+           }
+           else if(pParser.getCurrentToken() == JsonToken.FIELD_NAME && pParser.getText() == 'Circle')
+           {
+               pParser.nextToken();
+               system.debug('Circle Value is....: '+ pParser.getText());
+           }
+           else if(pParser.getCurrentToken() == JsonToken.FIELD_NAME && pParser.getText() == 'District')
+           {
+               pParser.nextToken();
+               system.debug('District Value is....: '+ pParser.getText());
+           }
+           else if(pParser.getCurrentToken() == JsonToken.FIELD_NAME && pParser.getText() == 'Division')
+           {
+               pParser.nextToken();
+               system.debug('Division Name is....: '+ pParser.getText());
+           }
+           else if(pParser.getCurrentToken() == JsonToken.FIELD_NAME && pParser.getText() == 'Region')
+           {
+               pParser.nextToken();
+               system.debug('Region Name is...: '+ pParser.getText());
+           }
